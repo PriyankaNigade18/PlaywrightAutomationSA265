@@ -86,9 +86,9 @@ console.log("------BigInt------");
 let num5=900719925474099168789098090n;
 console.log(typeof num5);//bigint
 let num6=89n;
-console.log(typeof num6);//bigint
+console.log(typeof num6);//bigint//
 
-console.log(num4+num6);
+//console.log(num4+num6);//TypeError: Cannot mix BigInt and other types, use explicit conversions
 
 
 console.log("--------boolean--------");
@@ -164,6 +164,10 @@ let requestPayload=`{
 }`;
 
 console.log(requestPayload);
+console.log("Request payload is: "+requestPayload);
+console.log(`Request payload is ${requestPayload}`);
+
+
 
 console.log(typeof requestPayload);//string
 
@@ -191,6 +195,113 @@ console.log(typeof stdName);//object
 let clgName=null;
 console.log(clgName);//null
 console.log(typeof clgName);//object
+
+console.log("-----symbol------");
+/*
+-it is used to create unique keys in Js Object
+NA for automation
+
+Object ways
+=================
+1.Object Literal
+2.Using Class
+3.Using constructor function
+4.Using prototypes
+
+*/
+
+console.log("-----Object Literal------");
+
+
+let user={};
+console.log(user);//{}
+console.log(typeof user);//object
+
+//Array []
+let userId=[10,20,30];
+console.log(userId);//[10,20,30]
+console.log(typeof userId);//object
+
+
+let person={
+  id:101,
+  name:"Sarang"
+}
+console.log(person);//{ id: 101, name: 'Sarang' }
+
+/*
+Access property From object
+-----------------------------
+1. dot notation
+ObjectName.Key
+
+2.Bracket notation ["Key"]
+ObjectName["Key"]
+*/
+console.log(person.id);//101
+console.log(person["name"]);//Sarang
+
+//Add new property
+person.address="Pune";
+console.log(person);
+
+//Modify any property
+person.id=201;
+console.log(person);
+
+//delete any property
+delete person.address;
+
+console.log(person);
+
+
+//symbol type data
+let profile1=Symbol("QA");
+console.log(profile1);//Symbol(QA)
+console.log(typeof profile1);//symbol
+
+let product={
+  name:"MacBook Pro",
+  price:9898098
+}
+
+console.log(product);//{ name: 'MacBook Pro', price: 9898098 }
+
+//unique
+let pid=Symbol("id");
+
+//add symbol property to object objectName[symbol type variable]
+product[pid]=8888;
+
+console.log(product);//{ name: 'MacBook Pro', price: 9898098, [Symbol(id)]: 8888 }
+
+product.pid=1010;
+console.log(product);//{ name: 'MacBook Pro', price: 9898098, pid: 1010, [Symbol(id)]: 8888 }
+
+product.pid=2020;
+console.log(product);
+
+delete product.pid;
+
+console.log(product);
+
+//to modify symbol type data
+product[pid]=9999;
+console.log(product);
+
+//delete exeisting properties
+delete product.price;
+console.log(product);
+
+
+
+
+
+
+
+
+
+
 
 
 
