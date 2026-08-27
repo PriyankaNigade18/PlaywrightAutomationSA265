@@ -301,4 +301,4 @@ console.log("titles are not equal:"+(!(actTitle===expTitle)));//true
 
 
 
-console.log(10 > 5 > 1);
+
