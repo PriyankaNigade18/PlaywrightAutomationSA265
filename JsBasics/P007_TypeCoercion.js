@@ -224,11 +224,11 @@ console.log(100>=100<"100");
 console.log("true"+100);
 
 console.log("true"-100); //NaN
+
 console.log(true-100);//-99
 
 
-
-
+console.log(null+1);//1
 
 
 
